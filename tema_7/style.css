@@ -1,0 +1,48 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#sektion1 {
+  display: flex;
+  justify-content: center;
+}
+
+#sektion1 {
+  width: 100%;
+  height: 5rem;
+}
+
+#sektion2 {
+  padding-left: 2rem;
+}
+
+#sektion3 {
+  display: block;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+main {
+  border-style: solid;
+}
+
+#artikel1 {
+  border-style: solid;
+}
+#artikel2 {
+  border-style: solid;
+}
+@media only screen and (min-width: 600px) {
+  #sektion3 {
+    display: flex;
+    gap: 2rem;
+    padding: 4rem;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
