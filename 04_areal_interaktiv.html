@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Hvad er længden</p>
+<input type="text" id="længde">
+<p>Hvad er bredden</p>
+<input type="text" id="bredde">
+<button>Klik og beregn arealet, kik i konsollen</button>
+    <script>
+
+
+
+
+//Noget skal ske på vores button, derfor laver vi en queryselector//
+
+document.querySelector("button").addEventListener("click", buttonClicked);
+
+function buttonClicked(){
+let længde = document.querySelector("#længde");
+let bredde = document.querySelector("#bredde");
+let areal = længde * bredde;
+let resultat = 'Længden er ${længde} meter og bredden er ${bredde} meter.Arealet er længde*bredde';
+console.log(resultat);
+
+
+
+
+}
+
+
+
+
+        //Erklære en variabel//
+        /*
+ */
+
+        
+    </script>
+
+</body>
+
+</html>
