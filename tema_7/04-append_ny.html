@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+    
+</head>
+
+
+
+<body>
+   <header>  <h1>Titel </h1>   </header>
+    
+    <main> <h2>Undertitlel</h2>
+   <section id="sektion3">
+     <article id="artikel1"> <img src="/tema_7/02-js-DOM/palm.jpg" alt="ananas">
+ <h3>Article 1</h3>  <p>Lorem ipsum dolor sit, amet consectetur
+     adipisicing elit. Praesentium quibusdam blanditiis facilis sed
+      ipsam vero magni tempora harum dolore numquam commodi nemo
+      , quaerat nam sint sunt veniam quisquam architecto. Dolorem
+       saepe, nulla aliquam praesentium labore nam quis consectetur?
+        Alias rem, ut cupiditate nostrum fuga dignissimos perspiciatis eligendi? Quod alias odit illo. Suscipit maiores, quo nostrum tenetur corporis et iste libero? Asperiores magnam repellendus sint accusantium, repellat qui aliquam molestias sequi. 
+    Qui rerum vitae ab voluptatem doloribus minima officiis eum iusto.</p></article> 
+  
+    <article id="artikel2"><img src="/tema_7/02-js-DOM/palm.jpg" alt="farver">
+         <h3>Article 2</h3>  <p>Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Praesentium quibusdam blanditiis facilis sed
+         ipsam vero magni tempora harum dolore numquam commodi nemo
+         , quaerat nam sint sunt veniam quisquam architecto. Dolorem
+          saepe, nulla aliquam praesentium labore nam quis consectetur?
+           Alias rem, ut cupiditate nostrum fuga dignissimos perspiciatis eligendi? Quod alias odit illo. Suscipit maiores, quo nostrum tenetur corporis et iste libero? Asperiores magnam repellendus sint accusantium, repellat qui aliquam molestias sequi. 
+       Qui rerum vitae ab voluptatem doloribus minima officiis eum iusto.</p></article>
+
+</section>
+
+
+</main>
+
+<footer>This is the footer</footer>
+<script>
+//Tilføj nyt element, en ny artikel med js funktionen createElement. appendchild betyder: Tilføj et ekstra barn til den her sektion//
+ const pic1 = document.querySelector("article:nth-child(1) img ");
+ console.log(pic1);
+ pic1.src = "palm2.jpg";
+ pic1.alt = "Palmer";
+ 
+
+let mainSection = document.querySelector("section");
+let newArticle = document.createElement("article");
+let overskrift = document.createElement("h3");
+let overskriftText = document.createTextNode("Article 3");
+overskrift.appendChild(overskriftText);
+newArticle.appendChild(overskrift);
+mainSection.appendChild(newArticle);
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
