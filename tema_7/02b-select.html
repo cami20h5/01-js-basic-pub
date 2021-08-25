@@ -43,18 +43,22 @@
 
 <footer>This is the footer</footer>
 <script>
-//Peg på et element med document.queryselector, og en god ide er at putte det ind i en variabel//
-
+ //Udskift indhold. Først peger vi på den. I 4 linie giver jeg den en værdi "Billeder." I sidste sætning, prøver jeg nu at se hvad er det nu der står//
+// På den måde kan vi give elemntets tekst content en ny værdi//
+//For at vælge kun én af mine artikler ud, bruger jeg en psuedoselektor//
  const overskrift = document.querySelector("h1");
- console.log(overskrift);
+ const artikel1 = document.querySelector("article:nth-child(1) p")
  overskrift.textContent;
  console.log(overskrift.textContent);
+ overskrift.textContent = "Billeder";
+ console.log(overskrift.textContent);
+ artikel1.textContent = "Her er et billed af en grøn ananas";
+ artikel1.innerHTML = "Her er et <b>billed</b> af en grøn ananas";
+
+ 
 
 
- const artikel = document.querySelector("article");
- console.log(artikel);
- artikel.textContent;
- console.log(artikel.textContent);
+
 
 
 
