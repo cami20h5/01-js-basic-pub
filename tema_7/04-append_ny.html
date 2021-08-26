@@ -50,20 +50,26 @@
  pic1.alt = "Palmer";
  
 
-let mainSection = document.querySelector("section");
 let newArticle = document.createElement("article");
-let overskrift = document.createElement("h3");
-let overskriftText = document.createTextNode("Article 3");
-let p = document.createElement("p");
-let brodtekst = document.createTextNode("hej med dig");
+let mySection = document.querySelector("section");
+let nyOverskrift = document.createElement("h3");
+let overskriftTekst = document.createTextNode("Artikel 3");
+let newContent = document.createElement("p");
+let contentTekst = document.createTextNode("Tekst til artikel 3");
+let newPic = document.createElement("img");
+newPic.src = "palm.jpg";
 
 
 
-overskrift.appendChild(overskriftText);
-newArticle.appendChild(overskrift);
-mainSection.appendChild(newArticle);
-// p.appendChild(newArticle);
-// brodtekst.appendChild(newArticle);
+
+mySection.appendChild(newArticle);
+newArticle.appendChild(nyOverskrift);
+nyOverskrift.appendChild(overskriftTekst);
+newArticle.appendChild(newContent);
+newContent.appendChild(contentTekst);
+newArticle.appendChild(newPic);
+
+
 
 
 
