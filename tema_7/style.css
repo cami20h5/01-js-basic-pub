@@ -20,7 +20,7 @@ img {
 
 #sektion3 {
   display: block;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
 }
 
@@ -34,11 +34,20 @@ main {
 #artikel2 {
   border-style: solid;
 }
+
+#shadow {
+  box-shadow: 10px 10px 5px 0px rgba(233, 5, 5, 0.75);
+}
+
 @media only screen and (min-width: 600px) {
   #sektion3 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+
+    /* display: flex;
     gap: 2rem;
-    padding: 4rem;
+    padding: 4rem; */
   }
 }
 footer {

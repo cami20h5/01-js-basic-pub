@@ -10,7 +10,36 @@
     <title>Document</title>
     
 </head>
+<style>
+    
+    header, footer {
+        display: flex;
+        justify-content: center;
+    }
 
+    img {
+    width:100%;
+    
+    
+    }
+
+/* istedet for mediaqueries // */
+   
+section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 20px;
+            padding: 40px;
+        
+
+        }
+
+
+        .shadow {
+            box-shadow:  10px 10px 5px 0px rgba(228, 51, 51, 0.75);
+
+
+</style>
 
 
 <body>
@@ -18,7 +47,7 @@
     
     <main> <h2>Undertitlel</h2>
    <section id="sektion3">
-     <article id="artikel1"> <img src="/tema_7/02-js-DOM/palm.jpg" alt="ananas">
+     <article id="artikel1"> <img src="whater.jpg" alt="farver">
  <h3>Article 1</h3>  <p>Lorem ipsum dolor sit, amet consectetur
      adipisicing elit. Praesentium quibusdam blanditiis facilis sed
       ipsam vero magni tempora harum dolore numquam commodi nemo
@@ -27,7 +56,7 @@
         Alias rem, ut cupiditate nostrum fuga dignissimos perspiciatis eligendi? Quod alias odit illo. Suscipit maiores, quo nostrum tenetur corporis et iste libero? Asperiores magnam repellendus sint accusantium, repellat qui aliquam molestias sequi. 
     Qui rerum vitae ab voluptatem doloribus minima officiis eum iusto.</p></article> 
   
-    <article id="artikel2"><img src="/tema_7/02-js-DOM/palm.jpg" alt="farver">
+    <article id="artikel2"><img src="color.jpg" alt="farver">
          <h3>Article 2</h3>  <p>Lorem ipsum dolor sit, amet consectetur
         adipisicing elit. Praesentium quibusdam blanditiis facilis sed
          ipsam vero magni tempora harum dolore numquam commodi nemo
@@ -41,26 +70,13 @@
 
 </main>
 
-<footer>This is the footer</footer>
+
 <script>
-//Tilføj nyt element, en ny artikel med js funktionen createElement. appendchild betyder: Tilføj et ekstra barn til den her sektion//
- const pic1 = document.querySelector("article:nth-child(1) img ");
- console.log(pic1);
- pic1.src = "palm2.jpg";
- pic1.alt = "Palmer";
- 
 
 
-
-
-
-
- 
-document.addEventListener("DOMContentLoaded", start);
-
-function start () {
-    console.log("dom er loadet");
-    
+const titel = document.querySelector("header");
+const artikel1 = document.querySelector("article:nth-child(1) p");
+let img1 = document.querySelector("article:nth-child(1) img");
 let newArticle = document.createElement("article");
 let mySection = document.querySelector("section");
 let nyOverskrift = document.createElement("h3");
@@ -68,7 +84,19 @@ let overskriftTekst = document.createTextNode("Artikel 3");
 let newContent = document.createElement("p");
 let contentTekst = document.createTextNode("Tekst til artikel 3");
 let newPic = document.createElement("img");
-newPic.src = "palm.jpg";
+
+document.addEventListener("DOMContentLoaded", start);
+
+function start (){
+   console.log("dom er loadet");
+
+
+titel.textContent = "Billedgalleri"; 
+titel.innerHTML = " <h1> Billeder</h1> "
+artikel1.textContent = "Her er et billede af af en mand på en strand"; 
+artikel1.innerHTML = "Her er et <b> billede </b> af en mand på en strand";
+img1.alt = "Billede af strand";
+
 
 
 
@@ -79,47 +107,50 @@ nyOverskrift.appendChild(overskriftTekst);
 newArticle.appendChild(newContent);
 newContent.appendChild(contentTekst);
 newArticle.appendChild(newPic);
+newPic.src = "beach.jpg";
+
+img1.addEventListener("click", skiftBillede);
+
+            document.querySelector("article:nth-child(1)").addEventListener("mouseover", theMouseOver);
+            document.querySelector("article:nth-child(1)").addEventListener("mouseout", theMouseOut);
+            document.querySelector("article:nth-child(2)").addEventListener("mouseover", theMouseOver);
+            document.querySelector("article:nth-child(2)").addEventListener("mouseout", theMouseOut);
+            document.querySelector("article:nth-child(3)").addEventListener("mouseover", theMouseOver);
+            document.querySelector("article:nth-child(3)").addEventListener("mouseout", theMouseOut);
+        }
 
 
 
-
-palm.jpg.addEventListener("click", skiftBillede);
-
-}
+  
 
 
-
-function skiftBillede() {
-   // console.log(this);
-    let tal = Math.round(Math.random() * 10);
-    img1.src = "https://placeimg.com/400/300/arch?t=" + 10;
-}
-
-
-
-
-// let billede = document.querySelector("palm.jpg");
-
-// billede.addEventListener("click", klikBilled);
-
-// function klikBilled() {
-//     img1.src = "https://placeimg.com/400/300/arch?t="+4;
-// }
-
-
-
-
-
-}
+  function skiftBillede() {
+            console.log(this);
+            let tal = Math.round(Math.random() * 10);
+            img1.src = "https://placeimg.com/400/300/arch?t=" + tal;
  
 
+  }
 
+
+  function theMouseOver() {
+            console.log("HEY", this);
+            this.classList.toggle("shadow");
+
+        }
+
+        function theMouseOut() {
+            console.log("HEY", this);
+            this.classList.toggle("shadow");
+
+        }
 
 
 
 
 </script>
 
+<footer>This is the footer</footer>
 </body>
 
 </html>
