@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekt</title>
+</head>
+<body>
+<article></article>
+
+
+</body>
+</html>
+
+<script>
+
+
+let femdyr = [{
+            "navn": "Gris",
+            "type": "Pattedyr",
+            "levested": "Svinesti"
+            "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+        }, {
+            "navn": "frø",
+            "type": "Padder",
+            "levested": "Vand"
+            "billede": "http://mabe-kea.dk/E19/pics/frog.png"
+            
+        }, {
+            "navn": "Ææv",
+            "type": "Pattedyr",
+            "levested": "Naturen"
+            "billede": "http://mabe-kea.dk/E19/pics/fox.png"
+
+        } {"navn": "Sild",
+            "type": "Fisk",
+            "levested": "Vand"
+            "billede": "http://mabe-kea.dk/E19/pics/sild.jpg"
+
+        }];
+      
+
+        const listevisning = document.querySelector("article");
+    
+
+        femdyr.forEach(etDyr =>{
+            console.log(etDyr.navn);
+            listevisning.innerHTML += '<p>${etDyr.navn} ${etDyr.type} ${etDyr.levested} ${etDyr.billede}</p>'
+         
+        
+        
+        })
+
+
+
+</script>
+
